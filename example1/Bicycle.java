@@ -27,6 +27,7 @@ class Gear {
     Gear(float chainring, float cog) {
         this.chainring = chainring;
         this.cog = cog;
+        this.wheel = null;
     }
 
     Gear(float chainring, float cog, Wheel wheel) {
