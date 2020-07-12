@@ -22,7 +22,7 @@ class Wheel {
 class Gear {
     private float chainring;
     private float cog;
-    Wheel wheel;
+    private Wheel wheel;
 
     Gear(float chainring, float cog) {
         this.chainring = chainring;
