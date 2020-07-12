@@ -10,12 +10,28 @@ class Gear {
         this.tire = tire;
     }
 
+    public float getChainring() {
+        return chainring;
+    }
+
+    public float getCog() {
+        return cog;
+    }
+
+    public float getRim(){
+        return rim;
+    }
+
+    public float getTire() {
+        return tire;
+    }
+
     public float ratio() {
-        return chainring / cog;
+        return getChainring() / getCog();
     }
 
     public float gear_inches() {
-        return ratio() * (rim + (tire * 2));
+        return ratio() * (getRim() + (getTire() * 2));
     }
 }
 
