@@ -21,7 +21,11 @@ class Bicycle {
     }
 
     public String spares() {
-        return "Size: " + size + ", chain: " + chain + ", tire size: " + tire_size;
+        return "Size: " + size + ", chain: " + chain + ", tire size: " + tire_size + localSpares();
+    }
+
+    public String localSpares() {
+        return "";
     }
 
     public String getSize() {
@@ -42,8 +46,8 @@ class RoadBikes extends Bicycle {
         return "23";
     }
 
-    public String spares() {
-        return super.spares() + ", tape color: " + tape_color;
+    public String localSpares() {
+        return ", tape color: " + tape_color;
     }
 
 }
@@ -62,8 +66,8 @@ class MountainBike extends Bicycle {
         return "2.1";
     }
 
-    public String spares() {
-        return super.spares() + ", front shock: " + front_shock + ", rear shock: " + rear_shock;
+    public String localSpares() {
+        return ", front shock: " + front_shock + ", rear shock: " + rear_shock;
     }
 
 }
