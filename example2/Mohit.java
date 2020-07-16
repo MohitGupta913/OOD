@@ -16,12 +16,12 @@ class Bicycle {
         return "10-speed";
     }
 
-    private String getTireSize(){
+    public String getTireSize(){
         return "";
     }
 
     public String spares() {
-        return "Size: " + size + ", chain: " + chain;
+        return "Size: " + size + ", chain: " + chain + ", tire size: " + tire_size;
     }
 
     public String getSize() {
@@ -38,7 +38,7 @@ class RoadBikes extends Bicycle {
         this.tape_color = tape_color;
     }
 
-    private String getTireSize() {
+    public String getTireSize() {
         return "23";
     }
 
@@ -58,7 +58,7 @@ class MountainBike extends Bicycle {
         this.rear_shock = rear_shock;
     }
 
-    private String getTireSize() {
+    public String getTireSize() {
         return "2.1";
     }
 
