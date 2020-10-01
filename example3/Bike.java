@@ -23,7 +23,7 @@ class Parts{
         String spares = "";
         for(Part part : parts) {
             if(part.getIsReq()){
-                spares += ( part.getName() + " : " + part.getDesc() + ", " );
+                spares += ( part.getName() + " = " + part.getDesc() + ", " );
             }
         }
         return spares;
@@ -53,7 +53,6 @@ class Part {
 }
 
 public class Bike {
-
     public static void playWithBike() {
         Part[] roadParts = {
             new Part("chain", "10-speed"),
@@ -66,7 +65,9 @@ public class Bike {
             new Part("chain", "10-speed"),
             new Part("tire_size", "2.1"),
             new Part("front_shock", "Manitou", false),
-            new Part("rear_shock", "Fox")
+            new Part("rear_shock", "Fox"),
+            new Part("grip", "soft"),
+            new Part("paddle", "medium_size")
         };
 
         Parts mountainConfig = new Parts(mountainParts);
@@ -76,8 +77,6 @@ public class Bike {
 
         System.out.println(roadBike.spares());
         System.out.println(mountainBike.spares());
-
-
     }
     public static void main(String[] args) {
         playWithBike();
